@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 namespace ca.HenrySoftware
 {
 	public class Gename
@@ -32,8 +33,9 @@ namespace ca.HenrySoftware
 		}
 		public void Setup()
 		{
-			// m, f, n
-			using (var name = new StreamReader(@"Name.csv"))
+            var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            // m, f, n
+            using (var name = new StreamReader(dir + @"Name.csv"))
 			{
 				while (!name.EndOfStream)
 				{
@@ -55,7 +57,7 @@ namespace ca.HenrySoftware
 				}
 			}
 			// ms, mm, mf, fs, fm, ff, ns, nm, nf
-			using (var syllable = new StreamReader(@"Syllable.csv"))
+			using (var syllable = new StreamReader(dir + @"Syllable.csv"))
 			{
 				while (!syllable.EndOfStream)
 				{
@@ -101,7 +103,7 @@ namespace ca.HenrySoftware
 				}
 			}
 			// mp, mp, fp, fp, np, np
-			using (var title = new StreamReader(@"Title.csv"))
+			using (var title = new StreamReader(dir + @"Title.csv"))
 			{
 				while (!title.EndOfStream)
 				{
