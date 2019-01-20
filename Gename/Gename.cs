@@ -21,7 +21,14 @@ namespace ca.HenrySoftware
 		private Random _random = new Random(Guid.NewGuid().GetHashCode());
 		public Gename()
 		{
-			Setup();
+			try
+			{
+				Setup();
+			}
+			catch (Exception e)
+			{
+				Debug.Print("!!!Error: " + e.Message);
+			}
 		}
 		public void Setup()
 		{
