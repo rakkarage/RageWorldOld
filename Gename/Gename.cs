@@ -34,8 +34,8 @@ namespace ca.HenrySoftware
 		public void Setup()
 		{
             var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            // m, f, n
-            using (var name = new StreamReader(dir + @"Name.csv"))
+			// m, f, n
+			using (var name = new StreamReader(Path.Combine(dir, @"Name.csv")))
 			{
 				while (!name.EndOfStream)
 				{
@@ -57,7 +57,7 @@ namespace ca.HenrySoftware
 				}
 			}
 			// ms, mm, mf, fs, fm, ff, ns, nm, nf
-			using (var syllable = new StreamReader(dir + @"Syllable.csv"))
+			using (var syllable = new StreamReader(Path.Combine(dir, @"Syllable.csv")))
 			{
 				while (!syllable.EndOfStream)
 				{
@@ -103,7 +103,7 @@ namespace ca.HenrySoftware
 				}
 			}
 			// mp, mp, fp, fp, np, np
-			using (var title = new StreamReader(dir + @"Title.csv"))
+			using (var title = new StreamReader(Path.Combine(dir, @"Title.csv")))
 			{
 				while (!title.EndOfStream)
 				{
