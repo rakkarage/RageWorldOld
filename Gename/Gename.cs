@@ -9,15 +9,15 @@ namespace ca.HenrySoftware
 	{
 		private class Data
 		{
-			public List<string> Name;
-			public List<string> Start;
-			public List<string> Middle;
-			public List<string> Finish;
-			public List<string> Pre;
-			public List<string> Post;
+			public List<string> Name = new List<string>();
+			public List<string> Start = new List<string>();
+			public List<string> Middle = new List<string>();
+			public List<string> Finish = new List<string>();
+			public List<string> Pre = new List<string>();
+			public List<string> Post = new List<string>();
 		}
-		private Data _male;
-		private Data _female;
+		private Data _male = new Data();
+		private Data _female = new Data();
 		private char[] _vowel = { 'a', 'e', 'i', 'o', 'u', 'y' };
 		private Random _random = new Random(Guid.NewGuid().GetHashCode());
 		public Gename()
