@@ -41,14 +41,13 @@ namespace ca.HenrySoftware
 				{
 					var line = name.ReadLine();
 					var values = line.Split(',');
-					Debug.Assert(values.Length == 3);
-					var male = values[0];
+					var male = values.Length >= 1 ? values[0] : null;
 					if (!string.IsNullOrEmpty(male))
 						_male.Name.Add(male);
-					var female = values[1];
+					var female = values.Length >= 2 ? values[1] : null;
 					if (!string.IsNullOrEmpty(female))
 						_female.Name.Add(female);
-					var neutral = values[2];
+					var neutral = values.Length >= 3 ? values[2] : null;
 					if (!string.IsNullOrEmpty(neutral))
 					{
 						_male.Name.Add(neutral);
@@ -63,38 +62,37 @@ namespace ca.HenrySoftware
 				{
 					var line = syllable.ReadLine();
 					var values = line.Split(',');
-					Debug.Assert(values.Length == 9);
-					var maleStart = values[0];
+					var maleStart = values.Length >= 1 ? values[0] : null;
 					if (!string.IsNullOrEmpty(maleStart))
 						_male.Start.Add(maleStart);
-					var maleMiddle = values[1];
+					var maleMiddle = values.Length >= 2 ? values[1] : null;
 					if (!string.IsNullOrEmpty(maleMiddle))
 						_male.Middle.Add(maleMiddle);
-					var maleFinish = values[2];
+					var maleFinish = values.Length >= 3 ? values[2] : null;
 					if (!string.IsNullOrEmpty(maleFinish))
 						_male.Finish.Add(maleFinish);
-					var femaleStart = values[3];
+					var femaleStart = values.Length >= 4 ? values[3] : null;
 					if (!string.IsNullOrEmpty(femaleStart))
 						_female.Start.Add(femaleStart);
-					var femaleMiddle = values[4];
+					var femaleMiddle = values.Length >= 5 ? values[4]: null;
 					if (!string.IsNullOrEmpty(femaleMiddle))
 						_female.Middle.Add(femaleMiddle);
-					var femaleFinish = values[5];
+					var femaleFinish = values.Length >= 6 ? values[5] : null;
 					if (!string.IsNullOrEmpty(femaleFinish))
 						_female.Finish.Add(femaleFinish);
-					var neutralStart = values[6];
+					var neutralStart = values.Length >= 7 ? values[6] : null;
 					if (!string.IsNullOrEmpty(neutralStart))
 					{
 						_male.Start.Add(neutralStart);
 						_female.Start.Add(neutralStart);
 					}
-					var neutralMiddle = values[7];
+					var neutralMiddle = values.Length >= 8 ? values[7] : null;
 					if (!string.IsNullOrEmpty(neutralMiddle))
 					{
 						_male.Middle.Add(neutralMiddle);
 						_female.Middle.Add(neutralMiddle);
 					}
-					var neutralFinish = values[8];
+					var neutralFinish = values.Length >= 9 ? values[8] : null;
 					if (!string.IsNullOrEmpty(neutralFinish))
 					{
 						_male.Finish.Add(neutralFinish);
@@ -109,26 +107,25 @@ namespace ca.HenrySoftware
 				{
 					var line = title.ReadLine();
 					var values = line.Split(',');
-					Debug.Assert(values.Length == 6);
-					var malePre = values[0];
+					var malePre = values.Length >= 1 ? values[0] : null;
 					if (!string.IsNullOrEmpty(malePre))
 						_male.Pre.Add(malePre);
-					var malePost = values[0];
+					var malePost = values.Length >= 2 ? values[0] : null;
 					if (!string.IsNullOrEmpty(malePost))
 						_male.Post.Add(malePost);
-					var femalePre = values[2];
+					var femalePre = values.Length >= 3 ? values[2] : null;
 					if (!string.IsNullOrEmpty(femalePre))
 						_female.Pre.Add(femalePre);
-					var femalePost = values[3];
+					var femalePost = values.Length >= 4 ? values[3] : null;
 					if (!string.IsNullOrEmpty(femalePost))
 						_female.Post.Add(femalePost);
-					var neutralPre = values[4];
+					var neutralPre = values.Length >= 5 ? values[4] : null;
 					if (!string.IsNullOrEmpty(neutralPre))
 					{
 						_male.Pre.Add(neutralPre);
 						_female.Pre.Add(neutralPre);
 					}
-					var neutralPost = values[5];
+					var neutralPost = values.Length >= 6 ? values[5] : null;
 					if (!string.IsNullOrEmpty(neutralPost))
 					{
 						_male.Post.Add(neutralPost);
