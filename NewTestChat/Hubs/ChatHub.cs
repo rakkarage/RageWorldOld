@@ -6,10 +6,10 @@ namespace NewTestChat
 {
 	public class ChatHub : Hub
 	{
+		private Gename _gename = new Gename();
 		public async Task SendMessage(string user, string message)
 		{
-			var g = new Gename();
-			var name = g.Name();
+			var name = _gename.Name();
 			Debug.Print(name);
 			await Clients.All.SendAsync("ReceiveMessage", user, message);
 		}
