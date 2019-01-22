@@ -33,7 +33,7 @@ namespace ca.HenrySoftware
 		}
 		public void Setup()
 		{
-            var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+			var dir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 			// m, f, n
 			using (var name = new StreamReader(Path.Combine(dir, @"Name.csv")))
 			{
@@ -74,7 +74,7 @@ namespace ca.HenrySoftware
 					var femaleStart = values.Length >= 4 ? values[3] : null;
 					if (!string.IsNullOrEmpty(femaleStart))
 						_female.Start.Add(femaleStart);
-					var femaleMiddle = values.Length >= 5 ? values[4]: null;
+					var femaleMiddle = values.Length >= 5 ? values[4] : null;
 					if (!string.IsNullOrEmpty(femaleMiddle))
 						_female.Middle.Add(femaleMiddle);
 					var femaleFinish = values.Length >= 6 ? values[5] : null;
