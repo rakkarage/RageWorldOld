@@ -1,7 +1,8 @@
 ﻿@page
+@model IndexModel
 <div>
 	<h1>Chat</h1>
-	<h2>@ViewData["Title"]</h2>
+	<h2>@ViewData["Name"]</h2>
 	👤User: <input type="text" id="userInput" value='@ViewData["Title"]' />
 	💬Message: <input type="text" id="messageInput" />
 	<input type="button" id="sendButton" value="👍 Send Message" />
