@@ -1,0 +1,6 @@
+<ASX version ="3.0">
+  <TITLE>Lan1234</TITLE>
+  <ENTRY>
+    <REF HREF="http://192.168.0.100:1234" />
+  </ENTRY>
+</ASX>
