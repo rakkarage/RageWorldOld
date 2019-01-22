@@ -1,5 +1,9 @@
 ﻿@page
 @model IndexModel
+<link href="~/css/site.css" rel="stylesheet" type="text/css" />
+<div id="container">
+	<video autoplay="true" id="videoElement">This is a test...</video>
+</div>
 <div>
 	<h1>Chat</h1>
 	👤User: <input type="text" id="userInput" value='@ViewData["Name"]' />
@@ -9,4 +13,5 @@
 	<ul id="messagesList"></ul>
 </div>
 <script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/site.js"></script>
 <script src="~/js/chat.js"></script>
