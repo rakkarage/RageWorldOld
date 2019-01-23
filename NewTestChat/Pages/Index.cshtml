@@ -1,17 +1,19 @@
 ﻿@page
 @model IndexModel
 <link href="~/css/site.css" rel="stylesheet" type="text/css" />
-<div id="container">
-	<video autoplay="true" id="videoElement">This is a test...</video>
-</div>
-<div id="container">
-	<embed src="Lan1234.asx” height=”640” width=”480">
-</div>
-<div id="container">
-	<embed src="Wan1234.asx” height=”640” width=”480">
+<div id="videos">
+	<div id="container">
+		<video autoplay="true" id="videoElement">This is a test...</video>
+	</div>
+	<div id="container">
+		<embed src="Lan1234.asx” height=”160” width=”120">
+	</div>
+	<div id="container">
+		<embed src="Wan1234.asx” height=”160” width=”120">
+	</div>
 </div>
 <div>
-	<h1>Chat</h1>
+	<hr />
 	👤User: <input type="text" id="userInput" value='@ViewData["Name"]' />
 	💬Message: <input type="text" id="messageInput" value="Hello World!?"/>
 	<input type="button" id="sendButton" value="👍 Send Message" />

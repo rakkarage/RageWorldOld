@@ -3,15 +3,20 @@
 	margin: 0;
 }
 
+#videos {
+	display: flex;
+	background-color: steelblue;
+}
+
 #videoElement {
-	width: 500px;
-	height: 375px;
-	background-color: red;
+	width: 160px;
+	height: 120px;
+	background-color: lightsteelblue;
 }
 
 #container {
 	margin: 0px auto;
-	width: 500px;
-	height: 375px;
-	border: 10px green solid;
+	width: 160px;
+	height: 120px;
+	background-color: lightsteelblue;
 }
